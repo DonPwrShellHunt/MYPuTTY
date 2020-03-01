@@ -73,6 +73,9 @@ function Get-MYPuttySession {
 
         Begin {
             $SessionsDir = 'HKCU:\Software\SimonTatham\PuTTY\Sessions'
+        }
+
+        Process {
             If (!$Name) {
                 # if we are searching on property match, look at all sessions
                 $Name = '*'
@@ -97,9 +100,9 @@ function Get-MYPuttySession {
                     }
                     # Determines IsCentrify based on existence of DoKerberos property
                     if ($Property[0] -eq 'All') {
-                        $pset = Get-PuttySessionPropertySet -Name $ms.PSChildName
+                        $pset = Get-MYPuttySessionPropertySet -Name $ms.PSChildName
                     } else {
-                        $pset = Get-PuttySessionPropertySet -Name $ms.PSChildName -Property $Property
+                        $pset = Get-MYPuttySessionPropertySet -Name $ms.PSChildName -Property $Property
                     }
                     $objhash = [ordered] @{
                         Name=$ms.PSChildName
@@ -115,10 +118,6 @@ function Get-MYPuttySession {
             } else {
                 Write-Verbose -Message ('No sessions matched with Name {0}' -f $Name)
             }
-        }
-
-        Process {
-
         }
 
         End {
