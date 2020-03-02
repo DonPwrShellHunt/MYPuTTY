@@ -73,7 +73,7 @@ function Set-MYPuttySessionProperty {
                             }
                         }
                     } else {
-                        Write-Warning -Message ('PropertyName: {0} does not exist in Session: {1}' -f $pntype[$k],$sessionName)
+                        Write-Warning -Message ('PropertyName: {0} does not exist in Session: {1}' -f $k,$sessionName)
                     }
                 }
             }

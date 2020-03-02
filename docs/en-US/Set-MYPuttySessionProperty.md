@@ -13,7 +13,7 @@ Set specific properties in a Putty Session
 ## SYNTAX
 
 ```
-Set-MYPuttySessionProperty [-Name] <String> [-PropertyHash] <Hashtable> [-WhatIf] [-Confirm]
+Set-MYPuttySessionProperty [-Name] <String[]> [-PropertyHash] <Hashtable> [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Set-MYPuttySessionProperty -Name KerberosMagenta -PropertyHash @{WinTitle='Magen
 The name of the Putty Session to change
 
 ```yaml
-Type: String
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
