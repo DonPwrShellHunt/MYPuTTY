@@ -33,9 +33,14 @@ Get Putty Session information
 ## EXAMPLES
 
 ### EXAMPLE 1
+
+Get all defined putty sessions
+
+```powershell
+PS > Get-MYPuttySession
 ```
-Get-MYPuttySession
-```
+
+Really - get all sessions
 
 ### EXAMPLE 2
 ```
